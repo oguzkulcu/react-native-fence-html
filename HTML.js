@@ -7,12 +7,21 @@ import HTMLTextNode from './HTMLTextNode'
 import HTMLRenderers from './HTMLRenderers'
 import HTMLStyles from './HTMLStyles'
 
+
+import PropTypes from 'prop-types';
+
 class HTML extends React.Component {
   /* ****************************************************************************/
   // Class
   /* ****************************************************************************/
 
- 
+  static propTypes = {
+    html: PropTypes.string.isRequired,
+    htmlStyles: PropTypes.object,
+    onLinkPress: PropTypes.func,
+    renderers: PropTypes.object.isRequired
+  }
+
   static defaultProps = {
     renderers: HTMLRenderers
   }
